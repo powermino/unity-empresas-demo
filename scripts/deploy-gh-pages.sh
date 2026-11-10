@@ -1,6 +1,8 @@
 #!/usr/bin/env sh
 # Publica o build de produção no branch gh-pages do repositório "origin".
 set -e
+# No Git Bash (Windows), impede que "/repo/" vire "C:/Program Files/Git/repo/"
+export MSYS_NO_PATHCONV=1
 REPO_NAME=$(basename -s .git "$(git remote get-url origin)")
 VITE_BASE="/$REPO_NAME/" npx vite build
 touch dist/.nojekyll
