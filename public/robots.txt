@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /
+# Projeto conceitual demonstrativo. Troque por "Allow: /" ao publicar como site oficial.
